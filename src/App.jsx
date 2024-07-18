@@ -3,7 +3,6 @@ import { useState } from 'react'
 function App() {
 
   function execute() {
-    console.log("Keep going my gee");
     window.location.href = "quizPage.html";
 }
 

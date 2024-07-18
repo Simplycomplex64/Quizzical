@@ -35,10 +35,6 @@ function Questions() {
             };
         });
         setScore(correctCount);
-        console.log('Selected Answers:', selectedAnswersArray.map(answer => ({
-            selectedAnswer: answer.selectedAnswer,
-            correctAnswer: answer.correctAnswer
-        })));
     };
 
     // Function to fetch questions from API
@@ -49,7 +45,6 @@ function Questions() {
                 throw new Error('Failed to fetch questions');
             }
             const data = await response.json();
-            console.log(data)
             // Decode HTML entities in questions    
             const decodedQuestions = data.results.map(question => ({
                 ...question,
@@ -78,7 +73,6 @@ function Questions() {
         // Update the selected index for the specific question
         updatedSelectedIndices[questionIndex] = answerIndex;
         setSelectedAnswerIndices(updatedSelectedIndices);
-        console.log('Selected answer for question', questionIndex, ':', event.target.value);
     };
 
     return (
