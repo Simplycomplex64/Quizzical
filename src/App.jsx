@@ -21,7 +21,8 @@ function App() {
   // Function to fetch questions
   const fetchQuestions = async () => {
     try {
-      const response = await fetch('https://opentdb.com/api.php?amount=5');
+      const response = await fetch('https://opentdb.com/api.php?amount=10&difficulty=easy');
+      // https://opentdb.com/api.php?amount=5
       const data = await response.json();
       
       // Decode HTML entities in questions and answers
