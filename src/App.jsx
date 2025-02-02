@@ -21,7 +21,7 @@ function App() {
   // Function to fetch questions
   const fetchQuestions = async () => {
     try {
-      const response = await fetch('https://opentdb.com/api.php?amount=5&category=21');
+      const response = await fetch('https://opentdb.com/api.php?amount=10&category=22');
       // https://opentdb.com/api.php?amount=5
       const data = await response.json();
       
